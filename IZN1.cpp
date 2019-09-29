@@ -35,8 +35,40 @@ int main() {
             matrix[i][j] = (i + 1) * 10 + (j + 1);
         }
     }
-    delete_row(matrix,1,row);
-    delete_column(matrix,row,column,1);
+
+    matrix[1][1]=0;
+    matrix[2][2]=0;
+    matrix[0][0]=0;
+    int *buffer=new int[column];
+    int looper=0;
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < column; j++)
+        {
+            if (matrix[i][j]==0)
+            {
+                delete_row(matrix,i,row);
+                buffer[j]=1;
+                continue;
+            }
+        }
+    }
+    int i=0;
+    while(i<column)
+    {
+            if (buffer[i] == 1)
+            {
+                delete_column(matrix, row, column, i-looper);
+                buffer[i] = 0;
+                i--;
+                looper++;
+            }
+            i++;
+    }
+
+
+
+
 
     for (int i = 0; i < row; i++) {
         for (int j = 0; j < column; j++) {
