@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/C_plusplus.dir/2_task.cpp.o"
+  "CMakeFiles/C_plusplus.dir/IZN1.cpp.o"
   "C_plusplus"
   "C_plusplus.pdb"
 )

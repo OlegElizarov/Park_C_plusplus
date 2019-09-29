@@ -123,32 +123,32 @@ C_plusplus/fast:
 	$(MAKE) -f CMakeFiles/C_plusplus.dir/build.make CMakeFiles/C_plusplus.dir/build
 .PHONY : C_plusplus/fast
 
-2_task.o: 2_task.cpp.o
+IZN1.o: IZN1.cpp.o
 
-.PHONY : 2_task.o
+.PHONY : IZN1.o
 
 # target to build an object file
-2_task.cpp.o:
-	$(MAKE) -f CMakeFiles/C_plusplus.dir/build.make CMakeFiles/C_plusplus.dir/2_task.cpp.o
-.PHONY : 2_task.cpp.o
+IZN1.cpp.o:
+	$(MAKE) -f CMakeFiles/C_plusplus.dir/build.make CMakeFiles/C_plusplus.dir/IZN1.cpp.o
+.PHONY : IZN1.cpp.o
 
-2_task.i: 2_task.cpp.i
+IZN1.i: IZN1.cpp.i
 
-.PHONY : 2_task.i
+.PHONY : IZN1.i
 
 # target to preprocess a source file
-2_task.cpp.i:
-	$(MAKE) -f CMakeFiles/C_plusplus.dir/build.make CMakeFiles/C_plusplus.dir/2_task.cpp.i
-.PHONY : 2_task.cpp.i
+IZN1.cpp.i:
+	$(MAKE) -f CMakeFiles/C_plusplus.dir/build.make CMakeFiles/C_plusplus.dir/IZN1.cpp.i
+.PHONY : IZN1.cpp.i
 
-2_task.s: 2_task.cpp.s
+IZN1.s: IZN1.cpp.s
 
-.PHONY : 2_task.s
+.PHONY : IZN1.s
 
 # target to generate assembly for a file
-2_task.cpp.s:
-	$(MAKE) -f CMakeFiles/C_plusplus.dir/build.make CMakeFiles/C_plusplus.dir/2_task.cpp.s
-.PHONY : 2_task.cpp.s
+IZN1.cpp.s:
+	$(MAKE) -f CMakeFiles/C_plusplus.dir/build.make CMakeFiles/C_plusplus.dir/IZN1.cpp.s
+.PHONY : IZN1.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... C_plusplus"
-	@echo "... 2_task.o"
-	@echo "... 2_task.i"
-	@echo "... 2_task.s"
+	@echo "... IZN1.o"
+	@echo "... IZN1.i"
+	@echo "... IZN1.s"
 .PHONY : help
 
 

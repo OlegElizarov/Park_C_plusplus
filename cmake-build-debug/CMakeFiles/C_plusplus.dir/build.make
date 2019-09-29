@@ -57,27 +57,27 @@ include CMakeFiles/C_plusplus.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/C_plusplus.dir/flags.make
 
-CMakeFiles/C_plusplus.dir/2_task.cpp.o: CMakeFiles/C_plusplus.dir/flags.make
-CMakeFiles/C_plusplus.dir/2_task.cpp.o: ../2_task.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/C_plusplus.dir/2_task.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/C_plusplus.dir/2_task.cpp.o -c /Users/elenaelizarova/CLionProjects/Park_C_plusplus/2_task.cpp
+CMakeFiles/C_plusplus.dir/IZN1.cpp.o: CMakeFiles/C_plusplus.dir/flags.make
+CMakeFiles/C_plusplus.dir/IZN1.cpp.o: ../IZN1.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/C_plusplus.dir/IZN1.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/C_plusplus.dir/IZN1.cpp.o -c /Users/elenaelizarova/CLionProjects/Park_C_plusplus/IZN1.cpp
 
-CMakeFiles/C_plusplus.dir/2_task.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/C_plusplus.dir/2_task.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/elenaelizarova/CLionProjects/Park_C_plusplus/2_task.cpp > CMakeFiles/C_plusplus.dir/2_task.cpp.i
+CMakeFiles/C_plusplus.dir/IZN1.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/C_plusplus.dir/IZN1.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/elenaelizarova/CLionProjects/Park_C_plusplus/IZN1.cpp > CMakeFiles/C_plusplus.dir/IZN1.cpp.i
 
-CMakeFiles/C_plusplus.dir/2_task.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/C_plusplus.dir/2_task.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/elenaelizarova/CLionProjects/Park_C_plusplus/2_task.cpp -o CMakeFiles/C_plusplus.dir/2_task.cpp.s
+CMakeFiles/C_plusplus.dir/IZN1.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/C_plusplus.dir/IZN1.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/elenaelizarova/CLionProjects/Park_C_plusplus/IZN1.cpp -o CMakeFiles/C_plusplus.dir/IZN1.cpp.s
 
 # Object files for target C_plusplus
 C_plusplus_OBJECTS = \
-"CMakeFiles/C_plusplus.dir/2_task.cpp.o"
+"CMakeFiles/C_plusplus.dir/IZN1.cpp.o"
 
 # External object files for target C_plusplus
 C_plusplus_EXTERNAL_OBJECTS =
 
-C_plusplus: CMakeFiles/C_plusplus.dir/2_task.cpp.o
+C_plusplus: CMakeFiles/C_plusplus.dir/IZN1.cpp.o
 C_plusplus: CMakeFiles/C_plusplus.dir/build.make
 C_plusplus: CMakeFiles/C_plusplus.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable C_plusplus"

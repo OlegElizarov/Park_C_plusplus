@@ -80,7 +80,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/elenaelizarova/CLionProjects/Park_C_plusplus/2_task.cpp">
+		<Unit filename="/Users/elenaelizarova/CLionProjects/Park_C_plusplus/IZN1.cpp">
 			<Option target="C_plusplus"/>
 		</Unit>
 		<Unit filename="/Users/elenaelizarova/CLionProjects/Park_C_plusplus/CMakeLists.txt">
