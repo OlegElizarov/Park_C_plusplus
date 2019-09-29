@@ -1,18 +1,20 @@
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
 
 
 int main() {
+
     int row=0;
     int column=0;
     cin>>row>>column;
-    int **matrix;
 
-    matrix = new int*[row];
-    for (int i = 0; i < row; i++) {
-        matrix[i] = new int [column];
+    vector< vector<int> > matrix(row);
+    for (int i = 0; i < row; i++)
+    {
+        matrix[i].resize(column);
     }
 
     for (int i = 0; i < row; i++) {
@@ -21,8 +23,8 @@ int main() {
         }
     }
 
-    int *buffer=new int [max(row,column)];
-
+    matrix.erase(matrix.begin()+1);
+    matrix[0].erase(matrix[0].begin()+1);
     for (int i = 0; i < row; i++) {
         for (int j = 0; j < column; j++) {
             cout<<matrix[i][j]<<' ';
@@ -30,5 +32,9 @@ int main() {
         cout<<endl;
     }
 
+
+
+
+    
     return 0;
 }
