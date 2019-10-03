@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+
 void delete_column(int *matr[],int row,int *col,int delcol)
 {
     for(int k=0;k<row;k++) {
@@ -20,19 +21,17 @@ void delete_row(int *matr[],int delrow,int *row)
     *row=*row-1;
 }
 
-
-
-
 int main() {
 
     int row=0;
     int column=0;
     scanf("%d%d",&row,&column);
-
     int **matrix = (int **)malloc(row * sizeof(int *));
     for (int i=0; i<row; i++) {
         matrix[i] = (int *) malloc(column * sizeof(int));
     }
+
+    //input here
     for (int i = 0; i < row; i++) {
         for (int j = 0; j < column; j++) {
             matrix[i][j] = (i + 1) * 10 + (j + 1);
@@ -42,10 +41,12 @@ int main() {
     int *buffer1=(int*) malloc(column*sizeof(int));
     int *buffer2=(int*) malloc(row*sizeof(int));
     int looper=0;
-
+    
+    //test for zero elements
     matrix[0][0]=0;
-    matrix[2][3]=0;
+    matrix[1][1]=0;
 
+    //finding zero elements
     for (int i = 0; i < row; i++)
     {
         for (int j = 0; j < column; j++)
@@ -59,6 +60,7 @@ int main() {
         }
     }
 
+    //deleting rows
     int i=0;
     while(i<=row)
     {
@@ -71,6 +73,7 @@ int main() {
         }
         i++;
     }
+    //deleting columns
     i=0;
     looper=0;
     while(i<=column)
@@ -84,6 +87,7 @@ int main() {
         }
         i++;
     }
+    //print
     for (int i = 0; i < row; i++) {
         for (int j = 0; j < column; j++) {
             printf("%d%c",matrix[i][j],' ');
