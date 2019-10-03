@@ -60,7 +60,7 @@ int main() {
     }
 
     int i=0;
-    while(i<row)
+    while(i<=row)
     {
         if (buffer2[i] == 1)
         {
@@ -73,7 +73,7 @@ int main() {
     }
     i=0;
     looper=0;
-    while(i<column)
+    while(i<=column)
     {
         if (buffer1[i] == 1)
         {
