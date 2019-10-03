@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-
 void delete_column(int *matr[],int row,int *col,int delcol)
 {
     for(int k=0;k<row;k++) {
@@ -21,6 +20,65 @@ void delete_row(int *matr[],int delrow,int *row)
     *row=*row-1;
 }
 
+void zero_dawn(int *matr[],int *rows, int *columns,int *res[])
+{
+
+    for (int i=0;i<*rows;i++)
+        for (int j = 0; j <*columns ; ++j) {
+            res[i][j]=matr[i][j];
+        }
+
+    int *buffer1=(int*) malloc(*columns*sizeof(int));
+    int *buffer2=(int*) malloc(*rows*sizeof(int));
+    int looper=0;
+    for (int i = 0; i < *rows; i++)
+    {
+        for (int j = 0; j < *columns; j++)
+        {
+            if (matr[i][j]==0)
+            {
+                buffer1[j]=1;
+                buffer2[i]=1;
+                continue;
+            }
+        }
+    }
+
+    //deleting rows
+    int i=0;
+    while(i<=*rows)
+    {
+        if (buffer2[i] == 1)
+        {
+            delete_row(res,i-looper,&(*rows));
+            buffer2[i] = 0;
+            i--;
+            looper++;
+        }
+        i++;
+    }
+
+
+    //deleting columns
+    i=0;
+    looper=0;
+    while(i<=*columns)
+    {
+        if (buffer1[i] == 1)
+        {
+            delete_column(res, *rows, &(*columns), i-looper);
+            buffer1[i] = 0;
+            i--;
+            looper++;
+        }
+        i++;
+    }
+
+
+
+}
+
+
 int main() {
 
     int row=0;
@@ -30,6 +88,10 @@ int main() {
     for (int i=0; i<row; i++) {
         matrix[i] = (int *) malloc(column * sizeof(int));
     }
+    int **result = (int **)malloc(row * sizeof(int *));
+    for (int i=0; i<row; i++) {
+        result[i] = (int *) malloc(column * sizeof(int));
+    }
 
     //input here
     for (int i = 0; i < row; i++) {
@@ -38,14 +100,17 @@ int main() {
         }
     }
 
-    int *buffer1=(int*) malloc(column*sizeof(int));
+    /*int *buffer1=(int*) malloc(column*sizeof(int));
     int *buffer2=(int*) malloc(row*sizeof(int));
-    int looper=0;
-    
+    int looper=0;*/
+
+
     //test for zero elements
     matrix[0][0]=0;
-    matrix[1][1]=0;
+    matrix[1][2]=0;
 
+
+    /*
     //finding zero elements
     for (int i = 0; i < row; i++)
     {
@@ -73,6 +138,8 @@ int main() {
         }
         i++;
     }
+
+
     //deleting columns
     i=0;
     looper=0;
@@ -87,12 +154,16 @@ int main() {
         }
         i++;
     }
+    */
+
+    zero_dawn(matrix,&row,&column,result);
     //print
     for (int i = 0; i < row; i++) {
         for (int j = 0; j < column; j++) {
-            printf("%d%c",matrix[i][j],' ');
+            printf("%d%c",result[i][j],' ');
         }
         printf("\n");
     }
     return 0;
 }
+
