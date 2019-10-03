@@ -33,12 +33,6 @@ int main() {
     for (int i=0; i<row; i++) {
         matrix[i] = (int *) malloc(column * sizeof(int));
     }
-    //vector< vector<int> > matrix(row);
-   /* for (int i = 0; i < row; i++)
-    {
-        matrix[i].resize(column);
-    }*/
-
     for (int i = 0; i < row; i++) {
         for (int j = 0; j < column; j++) {
             matrix[i][j] = (i + 1) * 10 + (j + 1);
