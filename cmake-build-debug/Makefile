@@ -123,32 +123,32 @@ C_plusplus/fast:
 	$(MAKE) -f CMakeFiles/C_plusplus.dir/build.make CMakeFiles/C_plusplus.dir/build
 .PHONY : C_plusplus/fast
 
-IZN1.o: IZN1.cpp.o
+IZN1.o: IZN1.c.o
 
 .PHONY : IZN1.o
 
 # target to build an object file
-IZN1.cpp.o:
-	$(MAKE) -f CMakeFiles/C_plusplus.dir/build.make CMakeFiles/C_plusplus.dir/IZN1.cpp.o
-.PHONY : IZN1.cpp.o
+IZN1.c.o:
+	$(MAKE) -f CMakeFiles/C_plusplus.dir/build.make CMakeFiles/C_plusplus.dir/IZN1.c.o
+.PHONY : IZN1.c.o
 
-IZN1.i: IZN1.cpp.i
+IZN1.i: IZN1.c.i
 
 .PHONY : IZN1.i
 
 # target to preprocess a source file
-IZN1.cpp.i:
-	$(MAKE) -f CMakeFiles/C_plusplus.dir/build.make CMakeFiles/C_plusplus.dir/IZN1.cpp.i
-.PHONY : IZN1.cpp.i
+IZN1.c.i:
+	$(MAKE) -f CMakeFiles/C_plusplus.dir/build.make CMakeFiles/C_plusplus.dir/IZN1.c.i
+.PHONY : IZN1.c.i
 
-IZN1.s: IZN1.cpp.s
+IZN1.s: IZN1.c.s
 
 .PHONY : IZN1.s
 
 # target to generate assembly for a file
-IZN1.cpp.s:
-	$(MAKE) -f CMakeFiles/C_plusplus.dir/build.make CMakeFiles/C_plusplus.dir/IZN1.cpp.s
-.PHONY : IZN1.cpp.s
+IZN1.c.s:
+	$(MAKE) -f CMakeFiles/C_plusplus.dir/build.make CMakeFiles/C_plusplus.dir/IZN1.c.s
+.PHONY : IZN1.c.s
 
 # Help Target
 help:
