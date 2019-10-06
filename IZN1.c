@@ -108,8 +108,6 @@ int main() {
     //test for zero elements
     matrix[0][0]=0;
     matrix[1][1]=0;
-
-
     /*
     //finding zero elements
     for (int i = 0; i < row; i++)
