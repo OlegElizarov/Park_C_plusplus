@@ -107,7 +107,7 @@ int main() {
 
     //test for zero elements
     matrix[0][0]=0;
-    matrix[3][3]=0;
+    matrix[1][1]=0;
 
 
     /*
