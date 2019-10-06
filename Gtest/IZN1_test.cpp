@@ -1,14 +1,12 @@
 #include <gtest/gtest.h>
 #include "../IZN1.h"
 
-class Apptest:
-        public testing::Test
-{
-    void SetUp()
+class Testin{
+
 };
 
 
-F_TEST(rowcalctest)
+TEST(Testin,checkrow)
 {
     int row=5;
     int column=5;
@@ -23,7 +21,28 @@ F_TEST(rowcalctest)
     }
     int bufrows=row;
     int bufcol=column;
-    delete_row(matrix,0,row);
+    delete_row(matrix,0,&row);
     EXPECT_EQ(bufrows-1,row);
 }
+
+TEST(Testin,checkcol)
+{
+    int row=5;
+    int column=5;
+    int **matrix = (int **)malloc(row * sizeof(int *));
+    for (int i=0; i<row; i++) {
+        matrix[i] = (int *) malloc(column * sizeof(int));
+    }
+    for (int i = 0; i < row; i++) {
+        for (int j = 0; j < column; j++) {
+            matrix[i][j] = (i + 1) * 10 + (j + 1);
+        }
+    }
+    int bufrows=row;
+    int bufcol=column;
+    delete_column(matrix,row,&column,0);
+    EXPECT_EQ(bufcol-1,column);
+}
+
+
 
