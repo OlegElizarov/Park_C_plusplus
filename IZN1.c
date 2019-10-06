@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <assert.h>
 
 void delete_column(int *matr[],int row,int *col,int delcol)
 {
@@ -84,6 +85,8 @@ int main() {
     int row=0;
     int column=0;
     scanf("%d%d",&row,&column);
+    assert(row>0);
+    assert(column>0);
     int **matrix = (int **)malloc(row * sizeof(int *));
     for (int i=0; i<row; i++) {
         matrix[i] = (int *) malloc(column * sizeof(int));
@@ -97,6 +100,7 @@ int main() {
     for (int i = 0; i < row; i++) {
         for (int j = 0; j < column; j++) {
             matrix[i][j] = (i + 1) * 10 + (j + 1);
+            //assert(matrix[i][j]>0);
         }
     }
 
@@ -105,12 +109,16 @@ int main() {
     matrix[1][1]=0;
     zero_dawn(matrix,&row,&column,result);
     //print
-    for (int i = 0; i < row; i++) {
+
+    for (int i = 0; i < row; i++)
+    {
         for (int j = 0; j < column; j++) {
             printf("%d%c",result[i][j],' ');
         }
         printf("\n");
+        free(result[i]);
     }
+    free(result);
     return 0;
 }
 
