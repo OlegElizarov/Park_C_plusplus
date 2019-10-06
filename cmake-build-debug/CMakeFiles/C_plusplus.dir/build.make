@@ -60,7 +60,7 @@ include CMakeFiles/C_plusplus.dir/flags.make
 CMakeFiles/C_plusplus.dir/IZN1.c.o: CMakeFiles/C_plusplus.dir/flags.make
 CMakeFiles/C_plusplus.dir/IZN1.c.o: ../IZN1.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/C_plusplus.dir/IZN1.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/C_plusplus.dir/IZN1.c.o   -c /Users/elenaelizarova/CLionProjects/Park_C_plusplus/IZN1.c
+	$(CMAKE_COMMAND) -E __run_co_compile --cppcheck=ccheck --source=/Users/elenaelizarova/CLionProjects/Park_C_plusplus/IZN1.c -- /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/C_plusplus.dir/IZN1.c.o   -c /Users/elenaelizarova/CLionProjects/Park_C_plusplus/IZN1.c
 
 CMakeFiles/C_plusplus.dir/IZN1.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/C_plusplus.dir/IZN1.c.i"

@@ -100,60 +100,9 @@ int main() {
         }
     }
 
-    /*int *buffer1=(int*) malloc(column*sizeof(int));
-    int *buffer2=(int*) malloc(row*sizeof(int));
-    int looper=0;*/
-
-
     //test for zero elements
     matrix[0][0]=0;
     matrix[1][1]=0;
-    /*
-    //finding zero elements
-    for (int i = 0; i < row; i++)
-    {
-        for (int j = 0; j < column; j++)
-        {
-            if (matrix[i][j]==0)
-            {
-                buffer1[j]=1;
-                buffer2[i]=1;
-                continue;
-            }
-        }
-    }
-
-    //deleting rows
-    int i=0;
-    while(i<=row)
-    {
-        if (buffer2[i] == 1)
-        {
-            delete_row(matrix,i-looper,&row);
-            buffer2[i] = 0;
-            i--;
-            looper++;
-        }
-        i++;
-    }
-
-
-    //deleting columns
-    i=0;
-    looper=0;
-    while(i<=column)
-    {
-        if (buffer1[i] == 1)
-        {
-            delete_column(matrix, row, &column, i-looper);
-            buffer1[i] = 0;
-            i--;
-            looper++;
-        }
-        i++;
-    }
-    */
-
     zero_dawn(matrix,&row,&column,result);
     //print
     for (int i = 0; i < row; i++) {

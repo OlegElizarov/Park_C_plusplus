@@ -1,4 +1,11 @@
 /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/elenaelizarova/CLionProjects/Park_C_plusplus
--- Configuring done
--- Generating done
--- Build files have been written to: /Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug
+CMake Error at CMakeLists.txt:14 (add_subdirectory):
+  The source directory
+
+    /Users/elenaelizarova/CLionProjects/Park_C_plusplus/Gtest
+
+  does not contain a CMakeLists.txt file.
+
+
+-- Configuring incomplete, errors occurred!
+See also "/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/CMakeFiles/CMakeOutput.log".
