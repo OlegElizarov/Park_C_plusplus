@@ -3,7 +3,7 @@
 # This file can be validated on:
 # http://lint.travis-ci.org/
 
-language: cpp
+language: c
 
 # Define the matrix explicitly, manually expanding the combinations of (os, compiler, env).
 # It is more tedious, but grants us far more flexibility.
