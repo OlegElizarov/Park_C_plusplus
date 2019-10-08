@@ -16,12 +16,12 @@ matrix:
     - os: linux
       dist: xenial
       compiler: gcc
-      install: Gtest/googletest-master/ci/install-linux.sh && ./ci/log-config.sh
-      script: /ci/build-linux-bazel.sh
+      install: Gtest/googletest-master/ci/install-linux.sh && Gtest/googletest-master/ci/log-config.sh
+      script: Gtest/googletest-master/ci/build-linux-bazel.sh
     - os: linux
       dist: xenial
       compiler: clang
-      install: Gtest/googletest-master/ci/install-linux.sh && ./ci/log-config.sh
+      install: Gtest/googletest-master/ci/install-linux.sh && Gtest/googletest-master/ci/log-config.sh
       script: Gtest/googletest-master/ci/build-linux-bazel.sh
     - os: linux
       compiler: gcc
