@@ -5,13 +5,59 @@
 
 language: c
 
+# Define the matrix explicitly, manually expanding the combinations of (os, compiler, env).
+# It is more tedious, but grants us far more flexibility.
+matrix:
+  include:
     - os: linux
       compiler: gcc
+      env: BUILD_TYPE=Debug VERBOSE=1 CXX_FLAGS=-std=c++11
+    - os: linux
+      compiler: clang
+      env: BUILD_TYPE=Release VERBOSE=1 CXX_FLAGS=-std=c++11 -Wgnu-zero-variadic-macro-arguments
+    - os: linux
+      compiler: clang
+      env: BUILD_TYPE=Release VERBOSE=1 CXX_FLAGS=-std=c++11 NO_EXCEPTION=ON NO_RTTI=ON COMPILER_IS_GNUCXX=ON
+    - os: osx
+      compiler: gcc
+      env: BUILD_TYPE=Release VERBOSE=1 CXX_FLAGS=-std=c++11 HOMEBREW_LOGS=~/homebrew-logs HOMEBREW_TEMP=~/homebrew-temp
+    - os: osx
+      compiler: clang
+      env: BUILD_TYPE=Release VERBOSE=1 CXX_FLAGS=-std=c++11 HOMEBREW_LOGS=~/homebrew-logs HOMEBREW_TEMP=~/homebrew-temp
 
-  - Gtest/googletest-master/ci/install-${TRAVIS_OS_NAME}.sh
-  - Gtest/googletest-master/ci/env-${TRAVIS_OS_NAME}.sh
-  - Gtest/googletest-master/ci/log-config.sh
+# These are the install and build (script) phases for the most common entries in the matrix.  They could be included
+# in each entry in the matrix, but that is just repetitive.
+script:
+    - sudo ln -s /usr/bin/gcc-6 /usr/local/bin/gcc
+    - export CC=/usr/bin/gcc-6
+    - cd ./task1
+    - mkdir build
+    - cd build
+    - cmake ..
+    - make
+    - valgrind --tool=memcheck --leak-check=full ./task
+    - cppcheck --enable=all --std=c99 --check-config --suppress=missingIncludeSystem -I ../project/include/ ../project/src/
+    - ./task
+# This section installs the necessary dependencies.
+addons:
+  apt:
+    # List of whitelisted in travis packages for ubuntu-precise can be found here:
+    #   https://github.com/travis-ci/apt-package-whitelist/blob/master/ubuntu-precise
+    # List of whitelisted in travis apt-sources:
+    #   https://github.com/travis-ci/apt-source-whitelist/blob/master/ubuntu.json
+    sources:
+    - ubuntu-toolchain-r-test
+    - llvm-toolchain-precise-3.9
+    packages:
+    - g++-4.9
+    - clang-3.9
+    update: true
+  homebrew:
+    packages:
+    - ccache
+    - gcc@4.9
+    - llvm@4
+    update: true
 
-script: Gtest/googletest-master/ci/travis.sh
-
-
+notifications:
+  email: false
