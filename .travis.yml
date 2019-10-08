@@ -10,19 +10,19 @@ language: c
 matrix:
   include:
     - os: linux
-      before_install: chmod -R +x .Gtest/googletest-master/ci/*platformio.sh
-      install: .Gtest/googletest-master/ci/install-platformio.sh
-      script: .Gtest/googletest-master/ci/build-platformio.sh
+      before_install: chmod -R +x Gtest/googletest-master/ci/*platformio.sh
+      install: Gtest/googletest-master/ci/install-platformio.sh
+      script: Gtest/googletest-master/ci/build-platformio.sh
     - os: linux
       dist: xenial
       compiler: gcc
-      install: .Gtest/googletest-master/ci/install-linux.sh && ./ci/log-config.sh
-      script: ./ci/build-linux-bazel.sh
+      install: Gtest/googletest-master/ci/install-linux.sh && ./ci/log-config.sh
+      script: /ci/build-linux-bazel.sh
     - os: linux
       dist: xenial
       compiler: clang
-      install: .Gtest/googletest-master/ci/install-linux.sh && ./ci/log-config.sh
-      script: .Gtest/googletest-master/ci/build-linux-bazel.sh
+      install: Gtest/googletest-master/ci/install-linux.sh && ./ci/log-config.sh
+      script: Gtest/googletest-master/ci/build-linux-bazel.sh
     - os: linux
       compiler: gcc
       env: BUILD_TYPE=Debug VERBOSE=1 CXX_FLAGS=-std=c++11
@@ -42,11 +42,11 @@ matrix:
 # These are the install and build (script) phases for the most common entries in the matrix.  They could be included
 # in each entry in the matrix, but that is just repetitive.
 install:
-  - .Gtest/googletest-master/ci/install-${TRAVIS_OS_NAME}.sh
-  - . .Gtest/googletest-master/ci/env-${TRAVIS_OS_NAME}.sh
-  - .Gtest/googletest-master/ci/log-config.sh
+  - Gtest/googletest-master/ci/install-${TRAVIS_OS_NAME}.sh
+  - Gtest/googletest-master/ci/env-${TRAVIS_OS_NAME}.sh
+  - Gtest/googletest-master/ci/log-config.sh
 
-script: .Gtest/googletest-master/ci/travis.sh
+script: Gtest/googletest-master/ci/travis.sh
 
 # This section installs the necessary dependencies.
 addons:
