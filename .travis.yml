@@ -10,19 +10,19 @@ language: c
 matrix:
   include:
     - os: linux
-      before_install: chmod -R +x ./ci/*platformio.sh
-      install: ./ci/install-platformio.sh
-      script: ./ci/build-platformio.sh
+      before_install: chmod -R +x .Gtest/googletest-master/ci/*platformio.sh
+      install: .Gtest/googletest-master/ci/install-platformio.sh
+      script: .Gtest/googletest-master/ci/build-platformio.sh
     - os: linux
       dist: xenial
       compiler: gcc
-      install: ./ci/install-linux.sh && ./ci/log-config.sh
+      install: .Gtest/googletest-master/ci/install-linux.sh && ./ci/log-config.sh
       script: ./ci/build-linux-bazel.sh
     - os: linux
       dist: xenial
       compiler: clang
-      install: ./ci/install-linux.sh && ./ci/log-config.sh
-      script: ./ci/build-linux-bazel.sh
+      install: .Gtest/googletest-master/ci/install-linux.sh && ./ci/log-config.sh
+      script: .Gtest/googletest-master/ci/build-linux-bazel.sh
     - os: linux
       compiler: gcc
       env: BUILD_TYPE=Debug VERBOSE=1 CXX_FLAGS=-std=c++11

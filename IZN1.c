@@ -99,14 +99,12 @@ int main() {
     //input here
     for (int i = 0; i < row; i++) {
         for (int j = 0; j < column; j++) {
-            matrix[i][j] = (i + 1) * 10 + (j + 1);
+            scanf("%d",&matrix[i][j]);
             //assert(matrix[i][j]>0);
         }
     }
 
     //test for zero elements
-    matrix[0][0]=0;
-    matrix[1][1]=0;
     zero_dawn(matrix,&row,&column,result);
     //print
 
