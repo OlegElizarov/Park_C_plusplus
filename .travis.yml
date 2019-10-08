@@ -10,20 +10,6 @@ language: c
 matrix:
   include:
     - os: linux
-      before_install: chmod -R +x Gtest/googletest-master/ci/*platformio.sh
-      install: Gtest/googletest-master/ci/install-platformio.sh
-      script: Gtest/googletest-master/ci/build-platformio.sh
-    - os: linux
-      dist: xenial
-      compiler: gcc
-      install: Gtest/googletest-master/ci/install-linux.sh && Gtest/googletest-master/ci/log-config.sh
-      script: Gtest/googletest-master/ci/build-linux-bazel.sh
-    - os: linux
-      dist: xenial
-      compiler: clang
-      install: Gtest/googletest-master/ci/install-linux.sh && Gtest/googletest-master/ci/log-config.sh
-      script: Gtest/googletest-master/ci/build-linux-bazel.sh
-    - os: linux
       compiler: gcc
       env: BUILD_TYPE=Debug VERBOSE=1 CXX_FLAGS=-std=c++11
     - os: linux
