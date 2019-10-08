@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 set -evx
 
-. ci/get-nprocessors.sh
+. Gtest/googletest-master/ci/get-nprocessors.sh
 
 # if possible, ask for the precise number of processors,
 # otherwise take 2 processors as reasonable default; see
