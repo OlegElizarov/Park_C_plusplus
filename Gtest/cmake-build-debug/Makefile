@@ -222,19 +222,19 @@ gtest/fast:
 .PHONY : gtest/fast
 
 # target to build an object file
-IZN1_test.o:
-	$(MAKE) -f CMakeFiles/Gtest_run.dir/build.make CMakeFiles/Gtest_run.dir/IZN1_test.o
-.PHONY : IZN1_test.o
+test.o:
+	$(MAKE) -f CMakeFiles/Gtest_run.dir/build.make CMakeFiles/Gtest_run.dir/test.o
+.PHONY : test.o
 
 # target to preprocess a source file
-IZN1_test.i:
-	$(MAKE) -f CMakeFiles/Gtest_run.dir/build.make CMakeFiles/Gtest_run.dir/IZN1_test.i
-.PHONY : IZN1_test.i
+test.i:
+	$(MAKE) -f CMakeFiles/Gtest_run.dir/build.make CMakeFiles/Gtest_run.dir/test.i
+.PHONY : test.i
 
 # target to generate assembly for a file
-IZN1_test.s:
-	$(MAKE) -f CMakeFiles/Gtest_run.dir/build.make CMakeFiles/Gtest_run.dir/IZN1_test.s
-.PHONY : IZN1_test.s
+test.s:
+	$(MAKE) -f CMakeFiles/Gtest_run.dir/build.make CMakeFiles/Gtest_run.dir/test.s
+.PHONY : test.s
 
 # Help Target
 help:
@@ -253,9 +253,9 @@ help:
 	@echo "... gmock_main"
 	@echo "... gtest_main"
 	@echo "... gtest"
-	@echo "... IZN1_test.o"
-	@echo "... IZN1_test.i"
-	@echo "... IZN1_test.s"
+	@echo "... test.o"
+	@echo "... test.i"
+	@echo "... test.s"
 .PHONY : help
 
 

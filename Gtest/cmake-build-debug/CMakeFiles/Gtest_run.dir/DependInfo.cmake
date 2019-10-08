@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/elenaelizarova/CLionProjects/Park_C_plusplus/Gtest/IZN1_test.cpp" "/Users/elenaelizarova/CLionProjects/Park_C_plusplus/Gtest/cmake-build-debug/CMakeFiles/Gtest_run.dir/IZN1_test.o"
+  "/Users/elenaelizarova/CLionProjects/Park_C_plusplus/Gtest/test.cpp" "/Users/elenaelizarova/CLionProjects/Park_C_plusplus/Gtest/cmake-build-debug/CMakeFiles/Gtest_run.dir/test.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")
 

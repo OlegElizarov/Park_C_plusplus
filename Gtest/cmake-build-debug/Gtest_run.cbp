@@ -320,9 +320,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/elenaelizarova/CLionProjects/Park_C_plusplus/Gtest/IZN1_test.cpp">
-			<Option target="Gtest_run"/>
-		</Unit>
 		<Unit filename="/Users/elenaelizarova/CLionProjects/Park_C_plusplus/Gtest/googletest-master/googlemock/src/gmock-all.cc">
 			<Option target="gmock"/>
 		</Unit>
@@ -334,6 +331,9 @@
 		</Unit>
 		<Unit filename="/Users/elenaelizarova/CLionProjects/Park_C_plusplus/Gtest/googletest-master/googletest/src/gtest_main.cc">
 			<Option target="gtest_main"/>
+		</Unit>
+		<Unit filename="/Users/elenaelizarova/CLionProjects/Park_C_plusplus/Gtest/test.cpp">
+			<Option target="Gtest_run"/>
 		</Unit>
 		<Unit filename="/Users/elenaelizarova/CLionProjects/Park_C_plusplus/Gtest/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
