@@ -101,13 +101,13 @@ CMakeFiles/Gtest_run.dir/clean:
 # Directory level rules for directory Gtest
 
 # Recursive "all" directory target.
-Gtest/all: Gtest/CMakeFiles/Gtest_run.dir/all
+Gtest/all: Gtest/CMakeFiles/Gtest_runn.dir/all
 Gtest/all: Gtest/googletest-master/all
 
 .PHONY : Gtest/all
 
 # Recursive "clean" directory target.
-Gtest/clean: Gtest/CMakeFiles/Gtest_run.dir/clean
+Gtest/clean: Gtest/CMakeFiles/Gtest_runn.dir/clean
 Gtest/clean: Gtest/googletest-master/clean
 
 .PHONY : Gtest/clean
@@ -118,32 +118,32 @@ Gtest/preinstall: Gtest/googletest-master/preinstall
 .PHONY : Gtest/preinstall
 
 #=============================================================================
-# Target rules for target Gtest/CMakeFiles/Gtest_run.dir
+# Target rules for target Gtest/CMakeFiles/Gtest_runn.dir
 
 # All Build rule for target.
-Gtest/CMakeFiles/Gtest_run.dir/all: Gtest/googletest-master/googletest/CMakeFiles/gtest_main.dir/all
-Gtest/CMakeFiles/Gtest_run.dir/all: Gtest/googletest-master/googletest/CMakeFiles/gtest.dir/all
-	$(MAKE) -f Gtest/CMakeFiles/Gtest_run.dir/build.make Gtest/CMakeFiles/Gtest_run.dir/depend
-	$(MAKE) -f Gtest/CMakeFiles/Gtest_run.dir/build.make Gtest/CMakeFiles/Gtest_run.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target Gtest_run"
-.PHONY : Gtest/CMakeFiles/Gtest_run.dir/all
+Gtest/CMakeFiles/Gtest_runn.dir/all: Gtest/googletest-master/googletest/CMakeFiles/gtest_main.dir/all
+Gtest/CMakeFiles/Gtest_runn.dir/all: Gtest/googletest-master/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) -f Gtest/CMakeFiles/Gtest_runn.dir/build.make Gtest/CMakeFiles/Gtest_runn.dir/depend
+	$(MAKE) -f Gtest/CMakeFiles/Gtest_runn.dir/build.make Gtest/CMakeFiles/Gtest_runn.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target Gtest_runn"
+.PHONY : Gtest/CMakeFiles/Gtest_runn.dir/all
 
 # Build rule for subdir invocation for target.
-Gtest/CMakeFiles/Gtest_run.dir/rule: cmake_check_build_system
+Gtest/CMakeFiles/Gtest_runn.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/CMakeFiles 6
-	$(MAKE) -f CMakeFiles/Makefile2 Gtest/CMakeFiles/Gtest_run.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 Gtest/CMakeFiles/Gtest_runn.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/CMakeFiles 0
-.PHONY : Gtest/CMakeFiles/Gtest_run.dir/rule
+.PHONY : Gtest/CMakeFiles/Gtest_runn.dir/rule
 
 # Convenience name for target.
-Gtest_run: Gtest/CMakeFiles/Gtest_run.dir/rule
+Gtest_runn: Gtest/CMakeFiles/Gtest_runn.dir/rule
 
-.PHONY : Gtest_run
+.PHONY : Gtest_runn
 
 # clean rule for target.
-Gtest/CMakeFiles/Gtest_run.dir/clean:
-	$(MAKE) -f Gtest/CMakeFiles/Gtest_run.dir/build.make Gtest/CMakeFiles/Gtest_run.dir/clean
-.PHONY : Gtest/CMakeFiles/Gtest_run.dir/clean
+Gtest/CMakeFiles/Gtest_runn.dir/clean:
+	$(MAKE) -f Gtest/CMakeFiles/Gtest_runn.dir/build.make Gtest/CMakeFiles/Gtest_runn.dir/clean
+.PHONY : Gtest/CMakeFiles/Gtest_runn.dir/clean
 
 #=============================================================================
 # Directory level rules for directory Gtest/googletest-master

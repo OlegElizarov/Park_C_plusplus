@@ -170,6 +170,19 @@ Gtest_run/fast:
 .PHONY : Gtest_run/fast
 
 #=============================================================================
+# Target rules for targets named Gtest_runn
+
+# Build rule for target.
+Gtest_runn: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Gtest_runn
+.PHONY : Gtest_runn
+
+# fast build rule for target.
+Gtest_runn/fast:
+	$(MAKE) -f Gtest/CMakeFiles/Gtest_runn.dir/build.make Gtest/CMakeFiles/Gtest_runn.dir/build
+.PHONY : Gtest_runn/fast
+
+#=============================================================================
 # Target rules for targets named gmock
 
 # Build rule for target.
@@ -221,20 +234,32 @@ gtest/fast:
 	$(MAKE) -f Gtest/googletest-master/googletest/CMakeFiles/gtest.dir/build.make Gtest/googletest-master/googletest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
-# target to build an object file
-Gtest/test.o:
-	$(MAKE) -f CMakeFiles/Gtest_run.dir/build.make CMakeFiles/Gtest_run.dir/Gtest/test.o
+Gtest/test.o: Gtest/test.cpp.o
+
 .PHONY : Gtest/test.o
 
-# target to preprocess a source file
-Gtest/test.i:
-	$(MAKE) -f CMakeFiles/Gtest_run.dir/build.make CMakeFiles/Gtest_run.dir/Gtest/test.i
+# target to build an object file
+Gtest/test.cpp.o:
+	$(MAKE) -f CMakeFiles/Gtest_run.dir/build.make CMakeFiles/Gtest_run.dir/Gtest/test.cpp.o
+.PHONY : Gtest/test.cpp.o
+
+Gtest/test.i: Gtest/test.cpp.i
+
 .PHONY : Gtest/test.i
 
-# target to generate assembly for a file
-Gtest/test.s:
-	$(MAKE) -f CMakeFiles/Gtest_run.dir/build.make CMakeFiles/Gtest_run.dir/Gtest/test.s
+# target to preprocess a source file
+Gtest/test.cpp.i:
+	$(MAKE) -f CMakeFiles/Gtest_run.dir/build.make CMakeFiles/Gtest_run.dir/Gtest/test.cpp.i
+.PHONY : Gtest/test.cpp.i
+
+Gtest/test.s: Gtest/test.cpp.s
+
 .PHONY : Gtest/test.s
+
+# target to generate assembly for a file
+Gtest/test.cpp.s:
+	$(MAKE) -f CMakeFiles/Gtest_run.dir/build.make CMakeFiles/Gtest_run.dir/Gtest/test.cpp.s
+.PHONY : Gtest/test.cpp.s
 
 # Help Target
 help:
@@ -249,6 +274,7 @@ help:
 	@echo "... Gtest_run"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... Gtest_runn"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest_main"

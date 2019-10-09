@@ -1,1 +1,1 @@
-/Library/Developer/CommandLineTools/usr/bin/c++  -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/Gtest_run.dir/Gtest/test.o  -o Gtest_run lib/libgtestd.a lib/libgtest_maind.a lib/libgtestd.a 
+/Library/Developer/CommandLineTools/usr/bin/c++  -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/Gtest_run.dir/Gtest/test.cpp.o  -o Gtest_run lib/libgtestd.a lib/libgtest_maind.a lib/libgtestd.a 

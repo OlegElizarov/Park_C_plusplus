@@ -57,27 +57,27 @@ include CMakeFiles/Gtest_run.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Gtest_run.dir/flags.make
 
-CMakeFiles/Gtest_run.dir/Gtest/test.o: CMakeFiles/Gtest_run.dir/flags.make
-CMakeFiles/Gtest_run.dir/Gtest/test.o: ../Gtest/test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Gtest_run.dir/Gtest/test.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Gtest_run.dir/Gtest/test.o -c /Users/elenaelizarova/CLionProjects/Park_C_plusplus/Gtest/test.cpp
+CMakeFiles/Gtest_run.dir/Gtest/test.cpp.o: CMakeFiles/Gtest_run.dir/flags.make
+CMakeFiles/Gtest_run.dir/Gtest/test.cpp.o: ../Gtest/test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Gtest_run.dir/Gtest/test.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Gtest_run.dir/Gtest/test.cpp.o -c /Users/elenaelizarova/CLionProjects/Park_C_plusplus/Gtest/test.cpp
 
-CMakeFiles/Gtest_run.dir/Gtest/test.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gtest_run.dir/Gtest/test.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/elenaelizarova/CLionProjects/Park_C_plusplus/Gtest/test.cpp > CMakeFiles/Gtest_run.dir/Gtest/test.i
+CMakeFiles/Gtest_run.dir/Gtest/test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gtest_run.dir/Gtest/test.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/elenaelizarova/CLionProjects/Park_C_plusplus/Gtest/test.cpp > CMakeFiles/Gtest_run.dir/Gtest/test.cpp.i
 
-CMakeFiles/Gtest_run.dir/Gtest/test.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gtest_run.dir/Gtest/test.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/elenaelizarova/CLionProjects/Park_C_plusplus/Gtest/test.cpp -o CMakeFiles/Gtest_run.dir/Gtest/test.s
+CMakeFiles/Gtest_run.dir/Gtest/test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gtest_run.dir/Gtest/test.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/elenaelizarova/CLionProjects/Park_C_plusplus/Gtest/test.cpp -o CMakeFiles/Gtest_run.dir/Gtest/test.cpp.s
 
 # Object files for target Gtest_run
 Gtest_run_OBJECTS = \
-"CMakeFiles/Gtest_run.dir/Gtest/test.o"
+"CMakeFiles/Gtest_run.dir/Gtest/test.cpp.o"
 
 # External object files for target Gtest_run
 Gtest_run_EXTERNAL_OBJECTS =
 
-Gtest_run: CMakeFiles/Gtest_run.dir/Gtest/test.o
+Gtest_run: CMakeFiles/Gtest_run.dir/Gtest/test.cpp.o
 Gtest_run: CMakeFiles/Gtest_run.dir/build.make
 Gtest_run: lib/libgtestd.a
 Gtest_run: lib/libgtest_maind.a

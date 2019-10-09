@@ -157,34 +157,46 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-Gtest/CMakeFiles/Gtest_run.dir/rule:
-	cd /Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 Gtest/CMakeFiles/Gtest_run.dir/rule
-.PHONY : Gtest/CMakeFiles/Gtest_run.dir/rule
+Gtest/CMakeFiles/Gtest_runn.dir/rule:
+	cd /Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 Gtest/CMakeFiles/Gtest_runn.dir/rule
+.PHONY : Gtest/CMakeFiles/Gtest_runn.dir/rule
 
 # Convenience name for target.
-Gtest_run: Gtest/CMakeFiles/Gtest_run.dir/rule
+Gtest_runn: Gtest/CMakeFiles/Gtest_runn.dir/rule
 
-.PHONY : Gtest_run
+.PHONY : Gtest_runn
 
 # fast build rule for target.
-Gtest_run/fast:
-	cd /Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug && $(MAKE) -f Gtest/CMakeFiles/Gtest_run.dir/build.make Gtest/CMakeFiles/Gtest_run.dir/build
-.PHONY : Gtest_run/fast
+Gtest_runn/fast:
+	cd /Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug && $(MAKE) -f Gtest/CMakeFiles/Gtest_runn.dir/build.make Gtest/CMakeFiles/Gtest_runn.dir/build
+.PHONY : Gtest_runn/fast
 
-# target to build an object file
-test.o:
-	cd /Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug && $(MAKE) -f Gtest/CMakeFiles/Gtest_run.dir/build.make Gtest/CMakeFiles/Gtest_run.dir/test.o
+test.o: test.cpp.o
+
 .PHONY : test.o
 
-# target to preprocess a source file
-test.i:
-	cd /Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug && $(MAKE) -f Gtest/CMakeFiles/Gtest_run.dir/build.make Gtest/CMakeFiles/Gtest_run.dir/test.i
+# target to build an object file
+test.cpp.o:
+	cd /Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug && $(MAKE) -f Gtest/CMakeFiles/Gtest_runn.dir/build.make Gtest/CMakeFiles/Gtest_runn.dir/test.cpp.o
+.PHONY : test.cpp.o
+
+test.i: test.cpp.i
+
 .PHONY : test.i
 
-# target to generate assembly for a file
-test.s:
-	cd /Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug && $(MAKE) -f Gtest/CMakeFiles/Gtest_run.dir/build.make Gtest/CMakeFiles/Gtest_run.dir/test.s
+# target to preprocess a source file
+test.cpp.i:
+	cd /Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug && $(MAKE) -f Gtest/CMakeFiles/Gtest_runn.dir/build.make Gtest/CMakeFiles/Gtest_runn.dir/test.cpp.i
+.PHONY : test.cpp.i
+
+test.s: test.cpp.s
+
 .PHONY : test.s
+
+# target to generate assembly for a file
+test.cpp.s:
+	cd /Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug && $(MAKE) -f Gtest/CMakeFiles/Gtest_runn.dir/build.make Gtest/CMakeFiles/Gtest_runn.dir/test.cpp.s
+.PHONY : test.cpp.s
 
 # Help Target
 help:
@@ -195,8 +207,8 @@ help:
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... install"
+	@echo "... Gtest_runn"
 	@echo "... list_install_components"
-	@echo "... Gtest_run"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test.o"

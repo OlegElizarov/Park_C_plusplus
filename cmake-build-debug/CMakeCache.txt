@@ -292,10 +292,16 @@ C_plusplus_SOURCE_DIR:STATIC=/Users/elenaelizarova/CLionProjects/Park_C_plusplus
 EXECUTABLE_OUTPUT_PATH:PATH=
 
 //Value Computed by CMake
-Gtest_run_BINARY_DIR:STATIC=/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Gtest
+Gtest_run_BINARY_DIR:STATIC=/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug
 
 //Value Computed by CMake
-Gtest_run_SOURCE_DIR:STATIC=/Users/elenaelizarova/CLionProjects/Park_C_plusplus/Gtest
+Gtest_run_SOURCE_DIR:STATIC=/Users/elenaelizarova/CLionProjects/Park_C_plusplus
+
+//Value Computed by CMake
+Gtest_runn_BINARY_DIR:STATIC=/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Gtest
+
+//Value Computed by CMake
+Gtest_runn_SOURCE_DIR:STATIC=/Users/elenaelizarova/CLionProjects/Park_C_plusplus/Gtest
 
 //Enable installation of googletest. (Projects embedding googletest
 // may want to turn this OFF.)
