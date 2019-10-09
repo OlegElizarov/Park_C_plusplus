@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <assert.h>
 
+
+//function for deleting columns, change their count
 void delete_column(int *matr[],int row,int *col,int delcol)
 {
     for(int k=0;k<row;k++) {
@@ -11,7 +13,7 @@ void delete_column(int *matr[],int row,int *col,int delcol)
     }
     *col=*col-1;
 }
-
+//function for deleting rows, change their count
 void delete_row(int *matr[],int delrow,int *row)
 {
     for (int i=delrow;i<*row-1;i++)
@@ -21,6 +23,8 @@ void delete_row(int *matr[],int delrow,int *row)
     *row=*row-1;
 }
 
+
+//finding zero elements and calling deleting functions
 void zero_dawn(int *matr[],int *rows, int *columns,int *res[])
 {
 
@@ -38,6 +42,7 @@ void zero_dawn(int *matr[],int *rows, int *columns,int *res[])
         {
             if (matr[i][j]==0)
             {
+                //buffers with zero element's rows and columns
                 buffer1[j]=1;
                 buffer2[i]=1;
                 continue;
@@ -85,6 +90,7 @@ int main() {
     int row=0;
     int column=0;
     scanf("%d%d",&row,&column);
+    //size must be >0
     assert(row>0);
     assert(column>0);
     int **matrix = (int **)malloc(row * sizeof(int *));
@@ -100,20 +106,22 @@ int main() {
     for (int i = 0; i < row; i++) {
         for (int j = 0; j < column; j++) {
             scanf("%d",&matrix[i][j]);
-            //assert(matrix[i][j]>0);
         }
     }
 
-    //test for zero elements
+    //here we have full matrix
     zero_dawn(matrix,&row,&column,result);
-    //print
+    //here we have result matrix
 
+
+    //print result
     for (int i = 0; i < row; i++)
     {
         for (int j = 0; j < column; j++) {
             printf("%d%c",result[i][j],' ');
         }
         printf("\n");
+        //freeeeee
         free(result[i]);
     }
     free(result);
