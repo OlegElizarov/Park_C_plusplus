@@ -2,19 +2,129 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6"/>
 	<Project>
-		<Option title="googletest-distribution"/>
+		<Option title="Gtest_run"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="clang"/>
 		<Option virtualFolders="CMake Files\;CMake Files\Gtest\;CMake Files\Gtest\googletest-master\;CMake Files\Gtest\googletest-master\googlemock\;CMake Files\Gtest\googletest-master\googlemock\cmake\;CMake Files\Gtest\googletest-master\googletest\;CMake Files\Gtest\googletest-master\googletest\cmake\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Gtest/googletest-master"/>
+				<Option working_dir="/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Gtest/googletest-master/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Gtest/googletest-master/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Gtest/googletest-master/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Gtest/googletest-master/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Gtest_run">
+				<Option output="/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Gtest_run" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir=""/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/elenaelizarova/CLionProjects/Park_C_plusplus/googletest-master/googletest/src"/>
+					<Add directory="/Users/elenaelizarova/CLionProjects/Park_C_plusplus/C_plusplus"/>
+					<Add directory="/Users/elenaelizarova/CLionProjects/Park_C_plusplus/Gtest/googletest-master/googletest/include"/>
+					<Add directory="/Users/elenaelizarova/CLionProjects/Park_C_plusplus/Gtest/googletest-master/googletest"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Makefile&quot;  VERBOSE=1 Gtest_run"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Gtest_run/fast">
+				<Option output="/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Gtest_run" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir=""/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/elenaelizarova/CLionProjects/Park_C_plusplus/googletest-master/googletest/src"/>
+					<Add directory="/Users/elenaelizarova/CLionProjects/Park_C_plusplus/C_plusplus"/>
+					<Add directory="/Users/elenaelizarova/CLionProjects/Park_C_plusplus/Gtest/googletest-master/googletest/include"/>
+					<Add directory="/Users/elenaelizarova/CLionProjects/Park_C_plusplus/Gtest/googletest-master/googletest"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Makefile&quot;  VERBOSE=1 Gtest_run/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gmock">
@@ -221,6 +331,9 @@
 		</Unit>
 		<Unit filename="/Users/elenaelizarova/CLionProjects/Park_C_plusplus/Gtest/googletest-master/googletest/src/gtest_main.cc">
 			<Option target="gtest_main"/>
+		</Unit>
+		<Unit filename="/Users/elenaelizarova/CLionProjects/Park_C_plusplus/Gtest/test.cpp">
+			<Option target="Gtest_run"/>
 		</Unit>
 		<Unit filename="/Users/elenaelizarova/CLionProjects/Park_C_plusplus/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

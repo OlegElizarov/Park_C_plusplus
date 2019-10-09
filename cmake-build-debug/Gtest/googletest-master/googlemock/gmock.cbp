@@ -225,9 +225,6 @@
 		<Unit filename="/Users/elenaelizarova/CLionProjects/Park_C_plusplus/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/Users/elenaelizarova/CLionProjects/Park_C_plusplus/Gtest/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\Gtest\"/>
-		</Unit>
 		<Unit filename="/Users/elenaelizarova/CLionProjects/Park_C_plusplus/Gtest/googletest-master/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\Gtest\googletest-master\"/>
 		</Unit>

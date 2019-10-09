@@ -56,6 +56,52 @@ CMAKE_BINARY_DIR = /Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-bui
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -111,44 +157,84 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named C_plusplus
+# Target rules for targets named Gtest_run
 
 # Build rule for target.
-C_plusplus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 C_plusplus
-.PHONY : C_plusplus
+Gtest_run: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Gtest_run
+.PHONY : Gtest_run
 
 # fast build rule for target.
-C_plusplus/fast:
-	$(MAKE) -f CMakeFiles/C_plusplus.dir/build.make CMakeFiles/C_plusplus.dir/build
-.PHONY : C_plusplus/fast
+Gtest_run/fast:
+	$(MAKE) -f CMakeFiles/Gtest_run.dir/build.make CMakeFiles/Gtest_run.dir/build
+.PHONY : Gtest_run/fast
 
-IZN1.o: IZN1.c.o
+#=============================================================================
+# Target rules for targets named gmock
 
-.PHONY : IZN1.o
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) -f Gtest/googletest-master/googlemock/CMakeFiles/gmock.dir/build.make Gtest/googletest-master/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) -f Gtest/googletest-master/googlemock/CMakeFiles/gmock_main.dir/build.make Gtest/googletest-master/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) -f Gtest/googletest-master/googletest/CMakeFiles/gtest_main.dir/build.make Gtest/googletest-master/googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) -f Gtest/googletest-master/googletest/CMakeFiles/gtest.dir/build.make Gtest/googletest-master/googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
 
 # target to build an object file
-IZN1.c.o:
-	$(MAKE) -f CMakeFiles/C_plusplus.dir/build.make CMakeFiles/C_plusplus.dir/IZN1.c.o
-.PHONY : IZN1.c.o
-
-IZN1.i: IZN1.c.i
-
-.PHONY : IZN1.i
+Gtest/test.o:
+	$(MAKE) -f CMakeFiles/Gtest_run.dir/build.make CMakeFiles/Gtest_run.dir/Gtest/test.o
+.PHONY : Gtest/test.o
 
 # target to preprocess a source file
-IZN1.c.i:
-	$(MAKE) -f CMakeFiles/C_plusplus.dir/build.make CMakeFiles/C_plusplus.dir/IZN1.c.i
-.PHONY : IZN1.c.i
-
-IZN1.s: IZN1.c.s
-
-.PHONY : IZN1.s
+Gtest/test.i:
+	$(MAKE) -f CMakeFiles/Gtest_run.dir/build.make CMakeFiles/Gtest_run.dir/Gtest/test.i
+.PHONY : Gtest/test.i
 
 # target to generate assembly for a file
-IZN1.c.s:
-	$(MAKE) -f CMakeFiles/C_plusplus.dir/build.make CMakeFiles/C_plusplus.dir/IZN1.c.s
-.PHONY : IZN1.c.s
+Gtest/test.s:
+	$(MAKE) -f CMakeFiles/Gtest_run.dir/build.make CMakeFiles/Gtest_run.dir/Gtest/test.s
+.PHONY : Gtest/test.s
 
 # Help Target
 help:
@@ -156,12 +242,20 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... install"
+	@echo "... list_install_components"
+	@echo "... Gtest_run"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... C_plusplus"
-	@echo "... IZN1.o"
-	@echo "... IZN1.i"
-	@echo "... IZN1.s"
+	@echo "... gmock"
+	@echo "... gmock_main"
+	@echo "... gtest_main"
+	@echo "... gtest"
+	@echo "... Gtest/test.o"
+	@echo "... Gtest/test.i"
+	@echo "... Gtest/test.s"
 .PHONY : help
 
 
