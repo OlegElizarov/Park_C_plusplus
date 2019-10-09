@@ -156,6 +156,36 @@ depend:
 	cd /Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+Gtest/CMakeFiles/Gtest_run.dir/rule:
+	cd /Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 Gtest/CMakeFiles/Gtest_run.dir/rule
+.PHONY : Gtest/CMakeFiles/Gtest_run.dir/rule
+
+# Convenience name for target.
+Gtest_run: Gtest/CMakeFiles/Gtest_run.dir/rule
+
+.PHONY : Gtest_run
+
+# fast build rule for target.
+Gtest_run/fast:
+	cd /Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug && $(MAKE) -f Gtest/CMakeFiles/Gtest_run.dir/build.make Gtest/CMakeFiles/Gtest_run.dir/build
+.PHONY : Gtest_run/fast
+
+# target to build an object file
+test.o:
+	cd /Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug && $(MAKE) -f Gtest/CMakeFiles/Gtest_run.dir/build.make Gtest/CMakeFiles/Gtest_run.dir/test.o
+.PHONY : test.o
+
+# target to preprocess a source file
+test.i:
+	cd /Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug && $(MAKE) -f Gtest/CMakeFiles/Gtest_run.dir/build.make Gtest/CMakeFiles/Gtest_run.dir/test.i
+.PHONY : test.i
+
+# target to generate assembly for a file
+test.s:
+	cd /Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug && $(MAKE) -f Gtest/CMakeFiles/Gtest_run.dir/build.make Gtest/CMakeFiles/Gtest_run.dir/test.s
+.PHONY : test.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -166,8 +196,12 @@ help:
 	@echo "... install/strip"
 	@echo "... install"
 	@echo "... list_install_components"
+	@echo "... Gtest_run"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... test.o"
+	@echo "... test.i"
+	@echo "... test.s"
 .PHONY : help
 
 

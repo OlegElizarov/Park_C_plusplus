@@ -292,10 +292,10 @@ C_plusplus_SOURCE_DIR:STATIC=/Users/elenaelizarova/CLionProjects/Park_C_plusplus
 EXECUTABLE_OUTPUT_PATH:PATH=
 
 //Value Computed by CMake
-Gtest_run_BINARY_DIR:STATIC=/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug
+Gtest_run_BINARY_DIR:STATIC=/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Gtest
 
 //Value Computed by CMake
-Gtest_run_SOURCE_DIR:STATIC=/Users/elenaelizarova/CLionProjects/Park_C_plusplus
+Gtest_run_SOURCE_DIR:STATIC=/Users/elenaelizarova/CLionProjects/Park_C_plusplus/Gtest
 
 //Enable installation of googletest. (Projects embedding googletest
 // may want to turn this OFF.)
@@ -491,7 +491,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

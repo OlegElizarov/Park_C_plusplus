@@ -5,6 +5,13 @@
 /Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/CMakeFiles/Gtest_run.dir
 /Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Gtest/CMakeFiles/install/local.dir
+/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Gtest/CMakeFiles/install/strip.dir
+/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Gtest/CMakeFiles/install.dir
+/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Gtest/CMakeFiles/list_install_components.dir
+/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Gtest/CMakeFiles/Gtest_run.dir
+/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Gtest/CMakeFiles/rebuild_cache.dir
+/Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Gtest/CMakeFiles/edit_cache.dir
 /Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Gtest/googletest-master/CMakeFiles/install/local.dir
 /Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Gtest/googletest-master/CMakeFiles/install/strip.dir
 /Users/elenaelizarova/CLionProjects/Park_C_plusplus/cmake-build-debug/Gtest/googletest-master/CMakeFiles/install.dir
