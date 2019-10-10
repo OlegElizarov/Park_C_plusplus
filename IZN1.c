@@ -15,10 +15,7 @@ int main() {
     for (int i=0; i<row; i++) {
         matrix[i] = (int *) malloc(column * sizeof(int));
     }
-    int **result = (int **)malloc(row * sizeof(int *));
-    for (int i=0; i<row; i++) {
-        result[i] = (int *) malloc(column * sizeof(int));
-    }
+    int **result;
 
     //input here
     for (int i = 0; i < row; i++) {
@@ -28,7 +25,7 @@ int main() {
     }
 
     //here we have full matrix
-    zero_dawn(matrix,&row,&column,result);
+    zero_dawn(matrix,&row,&column,&result);
     //here we have result matrix
 
 
