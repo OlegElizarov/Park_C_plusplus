@@ -4,16 +4,16 @@
 
 TEST(NULL,checkrow)
 {
-    int row=5;
-    int column=5;
-    int **matrix = (int **)malloc(row * sizeof(int *));
-    for (int i=0; i<row; i++) {
-    matrix[i] = (int *) malloc(column * sizeof(int));
+    int row = 5;
+    int column = 5;
+    int **matrix = (int **) malloc(row * sizeof(int *));
+    for (int i = 0; i < row; i++) {
+        matrix[i] = (int *) malloc(column * sizeof(int));
     }
     for (int i = 0; i < row; i++) {
-    for (int j = 0; j < column; j++) {
-    matrix[i][j] = (i + 1) * 10 + (j + 1);
-    }
+        for (int j = 0; j < column; j++) {
+            matrix[i][j] = (i + 1) * 10 + (j + 1);
+        }
     }
     int bufrows=row;
     int bufcol=column;
@@ -26,8 +26,8 @@ TEST(NULL,checkcol)
 {
     int row=5;
     int column=5;
-    int **matrix = (int **)malloc(row * sizeof(int *));
-    for (int i=0; i<row; i++) {
+    int **matrix = (int **) malloc(row * sizeof(int *));
+    for (int i = 0; i < row; i++) {
         matrix[i] = (int *) malloc(column * sizeof(int));
     }
     for (int i = 0; i < row; i++) {
