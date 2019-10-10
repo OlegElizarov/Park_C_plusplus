@@ -1,6 +1,7 @@
 #include "IZN1.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 //function for deleting columns, change their count
 void delete_column(int *matr[], int row, int *col, int delcol) {
@@ -21,12 +22,7 @@ void delete_row(int *matr[], int delrow, int *row) {
 
 
 //finding zero elements and calling deleting functions
-void zero_dawn(int *matr[], int *rows, int *columns, int *res[]) {
-
-    for (int i = 0; i < *rows; i++)
-        for (int j = 0; j < *columns; ++j) {
-            res[i][j] = matr[i][j];
-        }
+void zero_dawn(int *matr[], int *rows, int *columns, int *(*res[])) {
 
     int *buffer1 = (int *) malloc(*columns * sizeof(int));
     int *buffer2 = (int *) malloc(*rows * sizeof(int));
@@ -47,7 +43,7 @@ void zero_dawn(int *matr[], int *rows, int *columns, int *res[]) {
     size_t buf = *rows;
     while (i <= buf) {
         if (buffer2[i] == 1) {
-            delete_row(res, i - looper, &(*rows));
+            delete_row(matr, i - looper, &(*rows));
             buffer2[i] = 0;
             i--;
             looper++;
@@ -62,13 +58,21 @@ void zero_dawn(int *matr[], int *rows, int *columns, int *res[]) {
     looper = 0;
     while (i <= buf) {
         if (buffer1[i] == 1) {
-            delete_column(res, *rows, &(*columns), i - looper);
+            delete_column(matr, *rows, &(*columns), i - looper);
             buffer1[i] = 0;
             i--;
             looper++;
         }
         i++;
     }
+    *res = malloc(*rows * sizeof(int *));
+    for (int i=0; i<*rows; i++) {
+        (*res)[i] = malloc(*columns * sizeof(int));
+    }
 
-
+    for (int i = 0; i < (*rows) ; ++i) {
+        for (int j = 0; j < (*columns) ; ++j) {
+            (*res)[i][j]=matr[i][j];
+        }
+    }
 }
