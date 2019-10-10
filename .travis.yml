@@ -23,17 +23,6 @@ env:
   - TARGET_CPU=x86 BUILD_CONFIGURATION=Debug
   - TARGET_CPU=x86 BUILD_CONFIGURATION=Release
 
-#matrix:
-#  exclude:
-#    # вручную исключим ненужные элементы из матрицы сборки:
-#    - os:       osx
-#      compiler: gcc
-#
-#    - os:  osx
-#      env: TARGET_CPU=x86 BUILD_CONFIGURATION=Debug
-#
-#    - os:  osx
-#      env: TARGET_CPU=x86 BUILD_CONFIGURATION=Release
 
 
 # These are the install and build (script) phases for the most common entries in the matrix.  They could be included

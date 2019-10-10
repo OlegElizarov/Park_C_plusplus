@@ -52,7 +52,8 @@ void zero_dawn(int *matr[],int *rows, int *columns,int *res[])
 
     //deleting rows
     int i=0;
-    while(i<=*rows)
+    size_t buf=*rows;
+    while(i<=buf)
     {
         if (buffer2[i] == 1)
         {
@@ -67,8 +68,9 @@ void zero_dawn(int *matr[],int *rows, int *columns,int *res[])
 
     //deleting columns
     i=0;
+    buf=*columns;
     looper=0;
-    while(i<=*columns)
+    while(i<=buf)
     {
         if (buffer1[i] == 1)
         {
@@ -80,7 +82,9 @@ void zero_dawn(int *matr[],int *rows, int *columns,int *res[])
         i++;
     }
 
-
+// 000
+// 230
+// i=1  loop=1 col=2 buf12=0
 
 }
 

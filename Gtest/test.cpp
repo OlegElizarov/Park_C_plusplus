@@ -1,12 +1,8 @@
 #include <gtest/gtest.h>
 #include "../IZN1.h"
 
-class Testin{
 
-};
-
-
-TEST(Testin,checkrow)
+TEST(NULL,checkrow)
 {
     int row=5;
     int column=5;
@@ -26,7 +22,7 @@ TEST(Testin,checkrow)
     EXPECT_GE(row,0);
 }
 
-TEST(Testin,checkcol)
+TEST(NULL,checkcol)
 {
     int row=5;
     int column=5;
