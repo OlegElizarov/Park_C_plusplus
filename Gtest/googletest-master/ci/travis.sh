@@ -41,9 +41,7 @@ cmake -Dgtest_build_samples=ON \
       -DCMAKE_BUILD_TYPE=$BUILD_TYPE \
       ..
 make
-cd CMakeFiles
-cd Gtest_run.dir
+cd /home/travis/build/OlegElizarov/Park_C_plusplus/
 ls -la
-cd ..
-cd ..
+cd /.
 CTEST_OUTPUT_ON_FAILURE=1 make Gtest_run
