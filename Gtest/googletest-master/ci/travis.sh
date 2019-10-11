@@ -40,6 +40,6 @@ cmake -Dgtest_build_samples=ON \
       -DCMAKE_CXX_FLAGS=$CXX_FLAGS \
       -DCMAKE_BUILD_TYPE=$BUILD_TYPE \
       ..
-cppcheck --enable=all --std=c99 --check-config
 make
+ls -la
 CTEST_OUTPUT_ON_FAILURE=1 make Gtest_run
