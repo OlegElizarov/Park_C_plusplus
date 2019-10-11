@@ -1,24 +1,8 @@
-#include "IZN1.h"
+#include "func.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 
-//function for deleting columns, change their count
-void delete_column(int *matr[], int row, int *col, int delcol) {
-    for (int k = 0; k < row; k++) {
-        for (int i = delcol; i < *col - 1; i++) {
-            matr[k][i] = matr[k][i + 1];
-        }
-    }
-    *col = *col - 1;
-}
-//function for deleting rows, change their count
-void delete_row(int *matr[], int delrow, int *row) {
-    for (int i = delrow; i < *row - 1; i++) {
-        matr[i] = matr[i + 1];
-    }
-    *row = *row - 1;
-}
 
 
 //finding zero elements and calling deleting functions
