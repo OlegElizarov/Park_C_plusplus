@@ -41,7 +41,7 @@ cmake -Dgtest_build_samples=ON \
       -DCMAKE_BUILD_TYPE=$BUILD_TYPE \
       ..
 make
-pwd
-cppcheck --enable=all /home/travis/build/OlegElizarov/Park_C_plusplus/IZN1.c
-
+cd /home/travis/build/OlegElizarov/Park_C_plusplus/
+cppcheck --enable=all IZN1.c
+cd /home/travis/build/OlegElizarov/Park_C_plusplus/build
 CTEST_OUTPUT_ON_FAILURE=1 make Gtest_run
