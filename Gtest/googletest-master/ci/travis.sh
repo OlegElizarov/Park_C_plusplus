@@ -42,6 +42,8 @@ cmake -Dgtest_build_samples=ON \
       ..
 make
 cd CMakeFiles
+cd Gtest_run.dir
 ls -la
+cd ..
 cd ..
 CTEST_OUTPUT_ON_FAILURE=1 make Gtest_run
