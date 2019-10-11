@@ -1,7 +1,23 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <assert.h>
-#include "IZN1.h"
+#include "func.h"
+
+void delete_column(int *matr[], int row, int *col, int delcol) {
+    for (int k = 0; k < row; k++) {
+        for (int i = delcol; i < *col - 1; i++) {
+            matr[k][i] = matr[k][i + 1];
+        }
+    }
+    *col = *col - 1;
+}
+//function for deleting rows, change their count
+void delete_row(int *matr[], int delrow, int *row) {
+    for (int i = delrow; i < *row - 1; i++) {
+        matr[i] = matr[i + 1];
+    }
+    *row = *row - 1;
+}
 
 int main() {
 
@@ -24,9 +40,7 @@ int main() {
         }
     }
 
-    //here we have full matrix
     zero_dawn(matrix,&row,&column,&result);
-    //here we have result matrix
 
 
     //print result
@@ -36,7 +50,6 @@ int main() {
             printf("%d%c",result[i][j],' ');
         }
         printf("\n");
-        //freeeeee
         free(result[i]);
     }
     free(result);
