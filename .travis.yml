@@ -23,39 +23,24 @@ env:
   - TARGET_CPU=x86 BUILD_CONFIGURATION=Debug
   - TARGET_CPU=x86 BUILD_CONFIGURATION=Release
 
-before_install:
-    - sudo apt update
-    - sudo apt install cppcheck
-
-# These are the install and build (script) phases for the most common entries in the matrix.  They could be included
-# in each entry in the matrix, but that is just repetitive.
-install:
-  - Gtest/googletest-master/ci/install-${TRAVIS_OS_NAME}.sh
-  - Gtest/googletest-master/ci/env-${TRAVIS_OS_NAME}.sh
-  - Gtest/googletest-master/ci/log-config.sh
-
-script: Gtest/googletest-master/ci/travis.sh
-
-# This section installs the necessary dependencies.
 addons:
   apt:
-    # List of whitelisted in travis packages for ubuntu-precise can be found here:
-    #   https://github.com/travis-ci/apt-package-whitelist/blob/master/ubuntu-precise
-    # List of whitelisted in travis apt-sources:
-    #   https://github.com/travis-ci/apt-source-whitelist/blob/master/ubuntu.json
     sources:
       - ubuntu-toolchain-r-test
-      - llvm-toolchain-precise-3.9
     packages:
-      - g++-4.9
-      - clang-3.9
-    update: true
-  homebrew:
-    packages:
-      - ccache
-      - gcc@4.9
-      - llvm@4
-    update: true
+      - cmake
+      - gcc-6
+      - valgrind
+      - cppcheck
 
-notifications:
-  email: false
+script:
+  - sudo ln -s /usr/bin/gcc-6 /usr/local/bin/gcc
+  - export CC=/usr/bin/gcc-6
+  - cd ./task1
+  - mkdir build
+  - cd build
+  - cmake ..
+  - make
+  - valgrind --tool=memcheck --leak-check=full ./task ../project/tests/test.txt
+  - cppcheck --enable=all --std=c99 --check-config --suppress=missingIncludeSystem -I ../project/include/ ../project/src/
+  - ./task ../project/tests/test.txt
