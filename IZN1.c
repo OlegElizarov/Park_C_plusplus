@@ -3,6 +3,7 @@
 #include <assert.h>
 #include "func.h"
 
+//function for deleting columns, change their count
 void delete_column(int *matr[], int row, int *col, int delcol) {
     for (int k = 0; k < row; k++) {
         for (int i = delcol; i < *col - 1; i++) {
