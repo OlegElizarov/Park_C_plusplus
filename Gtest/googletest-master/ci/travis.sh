@@ -41,7 +41,7 @@ cmake -Dgtest_build_samples=ON \
       -DCMAKE_BUILD_TYPE=$BUILD_TYPE \
       ..
 make
-cd Gtest_run
+cd CMakeFiles
 ls -la
 cd ..
 CTEST_OUTPUT_ON_FAILURE=1 make Gtest_run
