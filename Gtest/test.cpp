@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include <cstddef>
 extern "C" {
-#include "../IZN1.h"
+#include "../func.h"
 }
 
 
