@@ -42,6 +42,6 @@ cmake -Dgtest_build_samples=ON \
       ..
 make
 cd /home/travis/build/OlegElizarov/Park_C_plusplus/
-cppcheck --enable=all --check-config --std=c99 --suppress=missingIncludeSystem IZN1.c
+cppcheck --enable=all --check-config --std=c99 --suppress=missingIncludeSystem Gtest/test.cpp
 cd /home/travis/build/OlegElizarov/Park_C_plusplus/build
 CTEST_OUTPUT_ON_FAILURE=1 make Gtest_run
