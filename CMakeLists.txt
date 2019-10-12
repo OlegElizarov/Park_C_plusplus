@@ -22,4 +22,5 @@ add_executable(Gtest_run Gtest/test.cpp )
 add_executable(Gtest_runn  IZN1.c)
 
 target_link_libraries(Gtest_run study_std_lib)
+target_link_libraries(Gtest_runn study_std_lib)
 target_link_libraries(Gtest_run gtest gtest_main)
