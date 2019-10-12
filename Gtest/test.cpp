@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
 #include <cstddef>
+#include <iostream>
 extern "C" {
 #include "../func.h"
 }
@@ -21,6 +22,7 @@ TEST(NULL,checkrow)
     int bufrows=row;
     int bufcol=column;
     delete_row(matrix,0,&row);
+    std::cout <<"fffff";
     EXPECT_EQ(bufrows-1,row);
     EXPECT_GE(row,0);
 }
