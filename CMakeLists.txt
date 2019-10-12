@@ -9,13 +9,11 @@ set(LIB_SOURCE_FILES
         )
 
 
-find_package(GTest REQUIRED)
-find_package(Threads)
-INCLUDE_DIRECTORIES(${GTEST_INCLUDE_DIRS})
+
 
 add_library(study_std_lib STATIC ${LIB_SOURCE_FILES})
 
 project(Gtest_run)
 
 add_executable(Gtest_run Gtest/test.cpp )
-target_link_libraries(Gtest_run  ${GTEST_BOTH_LIBRARIES} study_std_lib)
+target_link_libraries(Gtest_run study_std_lib)
