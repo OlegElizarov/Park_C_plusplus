@@ -1,4 +1,4 @@
-#include <googletest-master/googletest/include/gtest/gtest.h>
+#include <gtest/gtest.h>
 #include <cstddef>
 extern "C" {
 #include "../func.h"
