@@ -40,6 +40,8 @@ cmake -Dgtest_build_samples=ON \
       -DCMAKE_CXX_FLAGS=$CXX_FLAGS \
       -DCMAKE_BUILD_TYPE=$BUILD_TYPE \
       ..
+cp Gtest/googletest-master/googletest/include/gtest/gtest.h .
+cp Gtest/googletest-master/googletest/include/gtest/gtest.h ./Gtest
 make
 cd /home/travis/build/OlegElizarov/Park_C_plusplus/
 cppcheck --enable=all --check-config --std=c99 --suppress=missingIncludeSystem IZN1.c
