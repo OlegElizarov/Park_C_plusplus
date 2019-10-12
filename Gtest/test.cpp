@@ -24,7 +24,7 @@ TEST(NULL,checkrow)
     delete_row(matrix,0,&row);
     EXPECT_EQ(bufrows-1,row);
     EXPECT_GE(row,0);
-    for (int i = 0; i < bufrow; i++)
+    for (int i = 0; i < bufrows; i++)
     {
         free(matrix[i]);
     }
@@ -50,7 +50,7 @@ TEST(NULL,checkcol)
     delete_column(matrix,row,&column,0);
     EXPECT_EQ(bufcol-1,column);
     EXPECT_GE(column,0);
-    for (int i = 0; i < bufrow; i++)
+    for (int i = 0; i < bufrows; i++)
     {
         free(matrix[i]);
     }
