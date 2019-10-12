@@ -10,5 +10,5 @@ add_library(study_std_lib STATIC ${LIB_SOURCE_FILES})
 
 project(Gtest_run)
 
-add_executable(Gtest_run Gtest/test.cpp)
+add_executable(Gtest_run IZN1.c)
 target_link_libraries(Gtest_run study_std_lib)
