@@ -47,4 +47,4 @@ make
 cd /home/travis/build/OlegElizarov/Park_C_plusplus/
 cppcheck --enable=all --check-config --std=c99 --suppress=missingIncludeSystem IZN1.c
 cd /home/travis/build/OlegElizarov/Park_C_plusplus/build
-CTEST_OUTPUT_ON_FAILURE=1 make Gtest_run
+make Gtest_run
