@@ -20,4 +20,4 @@ include_directories(Gtest/googletest-master/googletest/include Gtest/googletest-
 
 add_executable(Gtest_run Gtest/test.cpp )
 target_link_libraries(Gtest_run study_std_lib)
-target_link_libraries(Gtest_runn gtest gtest_main)
+target_link_libraries(Gtest_run gtest gtest_main)
