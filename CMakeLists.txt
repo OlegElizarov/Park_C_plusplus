@@ -18,6 +18,6 @@ project(Gtest_run)
 add_subdirectory(Gtest/googletest-master)
 include_directories(Gtest/googletest-master/googletest/include Gtest/googletest-master/googletest/src )
 
-add_executable(Gtest_run Gtest/test.cpp )
+add_executable(Gtest_run Gtest/test.cpp IZN1.c)
 target_link_libraries(Gtest_run study_std_lib)
 target_link_libraries(Gtest_run gtest gtest_main)
