@@ -1,4 +1,4 @@
-#include <gtest/gtest.h>
+#include <gtest.h>
 #include <cstddef>
 extern "C" {
 #include "../func.h"
