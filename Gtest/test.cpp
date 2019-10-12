@@ -29,7 +29,6 @@ TEST(NULL,checkrow)
         free(matrix[i]);
     }
     free(matrix);
-        return 0;
 }
 
 TEST(NULL,checkcol)
@@ -56,7 +55,3 @@ TEST(NULL,checkcol)
     }
     free(matrix);
 }
-
-
-
-
