@@ -42,8 +42,7 @@ cmake -Dgtest_build_samples=ON \
       ..
 #cp Gtest/googletest-master/googletest/include/gtest/gtest.h .
 #cp Gtest/googletest-master/googletest/include/gtest/gtest.h ./Gtest
-ls -la 
-ls -la Gtest/
+
 make
 cd /home/travis/build/OlegElizarov/Park_C_plusplus/
 cppcheck --enable=all --check-config --std=c99 --suppress=missingIncludeSystem IZN1.c
