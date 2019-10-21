@@ -1,6 +1,26 @@
-cmake_minimum_required(VERSION 3.14)
-project(C_plusplus)
+cmake_minimum_required(VERSION 3.11)
 
 set(CMAKE_C_STANDARD 11)
+set(CMAKE_CXX_STANDARD 11)
 
-add_executable(C_plusplus IZN1.c)
+set(LIB_SOURCE_FILES
+        func.c
+        )
+
+
+
+
+add_library(study_std_lib STATIC ${LIB_SOURCE_FILES})
+
+project(Gtest_run)
+
+
+add_subdirectory(Gtest/googletest-master)
+include_directories(Gtest/googletest-master/googletest/include Gtest/googletest-master/googletest/src )
+
+add_executable(Gtest_run Gtest/test.cpp )
+add_executable(Gtest_runn  IZN1.c)
+
+target_link_libraries(Gtest_run study_std_lib)
+target_link_libraries(Gtest_runn study_std_lib)
+target_link_libraries(Gtest_run gtest gtest_main)
