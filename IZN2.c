@@ -1,6 +1,7 @@
 #include "IZN2.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 enum { BUF_LENGTH = 100*1024*1024 };
 
@@ -50,9 +51,17 @@ int main() {
 
     readFile(buffer,"../text.txt");
 
-    printf("%s", buffer);
+    //printf("%s", buffer);
 
-    printf("%d", search(buffer));
+    clock_t t;
+    t = clock();
+    int res=search(buffer);
+    t = clock() - t;
+    double time_taken = ((double)t)/CLOCKS_PER_SEC; // in seconds
+
+    printf("%d", res);
+    printf(" %f", time_taken);
+
 
     free(buffer);
     return 0;
