@@ -9,15 +9,23 @@ int search(char* buf)
 {
     int i=0;
     int count=0;
+    int maxcount=0;
     while (buf[i]!='\n')
     {
         if (( (int)buf[i] > 47) && ( (int)buf[i] < 58 ))
         {
             count++;
         }
+        else{
+            if (count>maxcount)
+            {
+                maxcount=count;
+            };
+            count=0;
+        }
         i++;
     }
-    return count;
+    return maxcount;
 
 }
 
