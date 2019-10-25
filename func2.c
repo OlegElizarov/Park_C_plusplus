@@ -3,8 +3,8 @@
 #include <stdlib.h>
 #include <time.h>
 #include <pthread.h>
-#include <mach/machine.h>
 #include <stdatomic.h>
+#include <stdbool.h>
 
 pthread_mutex_t lock;
 
@@ -12,13 +12,14 @@ enum { BUF_LENGTH = 100*1024*1024 };
 
 typedef struct Args_tag {
     int i;
-    char* buf;
     int end;
     int *res;
+    char* buf;
+
 } someArgs_t;
 
 atomic_long  fsize=0;
-boolean_t costyl=FALSE;
+bool costyl=false;
 atomic_int lastcount=0;
 
 void* lin_search(char* buf,int begin,int end,int *res)
@@ -73,7 +74,7 @@ void* search(void *args)
         else{
             count=0;
             lastcount=0;
-            costyl=FALSE;
+            costyl=false;
         }
         if (count>maxcount)
         {
@@ -81,9 +82,9 @@ void* search(void *args)
         };
         i++;
     }
-    if ((( (int)buf[end] > 47) && ( (int)buf[end] < 58 ))||((buf[end]=='\n')&&(((int)buf[end-1])>47)&&((int)buf[end-1])<58))
+    if ((( (int)buf[end] > 47) && ( (int)buf[end] < 58 )))//||((buf[end]=='\n')&&(((int)buf[end-1])>47)&&((int)buf[end-1])<58))
     {
-        costyl=TRUE;
+        costyl=true;
         //lastcount--;
     }
     *res=maxcount;
