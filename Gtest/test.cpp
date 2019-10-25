@@ -2,50 +2,32 @@
 #include <cstddef>
 #include <iostream>
 extern "C" {
-#include "../func.h"
+#include "../IZN2.h"
 }
 
 
-TEST(NULL,checkrow)
+TEST(NULL,checklin_search)
 {
-    int row = 5;
-    int column = 5;
-    int **matrix = (int **) malloc(row * sizeof(int *));
-    for (int i = 0; i < row; i++) {
-        matrix[i] = (int *) malloc(column * sizeof(int));
+    char buffer[1024];
+    int res[1];
+    int fsize=1024;
+    for (int i = 0; i <1023 ; ++i) {
+        buffer[i]=(char)(48+rand()%10);
     }
-    for (int i = 0; i < row; i++) {
-        for (int j = 0; j < column; j++) {
-            matrix[i][j] = (i + 1) * 10 + (j + 1);
-        }
-    }
-    int bufrows=row;
-    int bufcol=column;
-    delete_row(matrix,0,&row);
-    EXPECT_EQ(bufrows-1,row);
-    EXPECT_GE(row,0);
+    buffer[1023]='\0';
+    lin_search(buffer, 0, fsize, &res[0]);
+    EXPECT_EQ(1023,res[0]);
 }
 
-TEST(NULL,checkcol)
+TEST(NULL,checklin_search_max)
 {
-    int row=5;
-    int column=5;
-    int **matrix = (int **) malloc(row * sizeof(int *));
-    for (int i = 0; i < row; i++) {
-        matrix[i] = (int *) malloc(column * sizeof(int));
+    char buffer[1024];
+    int res[1];
+    int fsize=1024;
+    for (int i = 0; i <1023 ; ++i) {
+        buffer[i]=(char)(48+rand()%75);
     }
-    for (int i = 0; i < row; i++) {
-        for (int j = 0; j < column; j++) {
-            matrix[i][j] = (i + 1) * 10 + (j + 1);
-        }
-    }
-    int bufrows=row;
-    int bufcol=column;
-    delete_column(matrix,row,&column,0);
-    EXPECT_EQ(bufcol-1,column);
-    EXPECT_GE(column,0);
+    buffer[1023]='\0';
+    lin_search(buffer, 0, fsize, &res[0]);
+    EXPECT_LE(res[0],1022);
 }
-
-
-
-
