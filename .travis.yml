@@ -1,0 +1,58 @@
+language: c
+
+# Define the matrix explicitly, manually expanding the combinations of (os, compiler, env).
+# It is more tedious, but grants us far more flexibility.
+os:
+  # будем прогонять CI и на Linux, и на Mac OS X...
+  - linux
+
+compiler:
+  # ... и с помощью GCC, и Clang
+  - gcc
+  - clang
+
+env:
+  # список переменных окружения, влияющих на матрицу сборки:
+  - TARGET_CPU=amd64 BUILD_CONFIGURATION=Debug
+  - TARGET_CPU=amd64 BUILD_CONFIGURATION=Release
+  - TARGET_CPU=x86 BUILD_CONFIGURATION=Debug
+  - TARGET_CPU=x86 BUILD_CONFIGURATION=Release
+
+
+before_install:
+    - sudo apt update
+    - sudo apt install cppcheck
+    - sudo apt install valgrind
+
+# These are the install and build (script) phases for the most common entries in the matrix.  They could be included
+# in each entry in the matrix, but that is just repetitive.
+install:
+  - Gtest/googletest-master/ci/install-${TRAVIS_OS_NAME}.sh
+  - Gtest/googletest-master/ci/env-${TRAVIS_OS_NAME}.sh
+  - Gtest/googletest-master/ci/log-config.sh
+
+script: Gtest/googletest-master/ci/travis.sh
+
+# This section installs the necessary dependencies.
+addons:
+  apt:
+    # List of whitelisted in travis packages for ubuntu-precise can be found here:
+    #   https://github.com/travis-ci/apt-package-whitelist/blob/master/ubuntu-precise
+    # List of whitelisted in travis apt-sources:
+    #   https://github.com/travis-ci/apt-source-whitelist/blob/master/ubuntu.json
+    sources:
+      - ubuntu-toolchain-r-test
+      - llvm-toolchain-precise-3.9
+    packages:
+      - g++-4.9
+      - clang-3.9
+    update: true
+  homebrew:
+    packages:
+      - ccache
+      - gcc@4.9
+      - llvm@4
+    update: true
+
+notifications:
+  email: false
