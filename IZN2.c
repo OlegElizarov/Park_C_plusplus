@@ -16,26 +16,26 @@ int main() {
     char *buffer = malloc(BUF_LENGTH);
     int res[4];
     readFile(buffer,"../text.txt");
-    //printf("%s", buffer);
     clock_t t,timer;
     t = clock();
+
     printf("\n");
     printf("%s \n","Linear search");
-    //for (int i = 0; i < 2; ++i) {
-        lin_search(buffer, 0, fsize, &res[0]);
-        timer = clock() - t;
-        t=clock();
-        double time_taken = ((double) timer) / CLOCKS_PER_SEC; // in seconds
-        //printf("%d ",i);
-        printf("%d ", res[0]);
-        printf(" %f \n", time_taken);
-    //}
+
+    lin_search(buffer, 0, fsize, &res[0]);
+    timer = clock() - t;
+    t=clock();
+    double time_taken = ((double) timer) / CLOCKS_PER_SEC; // in seconds
+    printf("%d ", res[0]);
+    printf(" %f \n", time_taken);
 
     someArgs_t args[4];
     pthread_t threads[MAX_THREAD];
     printf("%s","Threads \n");
     t = clock();
-    for (int i = 0; i < MAX_THREAD; i++) {
+
+    for (int i = 0; i < MAX_THREAD; i++)
+    {
         args[i].buf=buffer;
         args[i].i=(i * fsize / 4)  +1;
         if (i==0)
@@ -44,7 +44,9 @@ int main() {
         }
         args[i].end=((fsize) * (i + 1) / 4);
         args[i].res=&res[i];
+
         pthread_create(&threads[i], NULL, search, (void *) &args[i]);
+
         timer = clock() - t;
         t=clock();
         double time_taken = ((double) timer) / CLOCKS_PER_SEC; // in seconds

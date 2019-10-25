@@ -17,13 +17,12 @@ typedef struct Args_tag {
     int *res;
 } someArgs_t;
 
-long fsize=0;
+atomic_long  fsize=0;
 boolean_t costyl=FALSE;
 atomic_int lastcount=0;
 
 void* lin_search(char* buf,int begin,int end,int *res)
 {
-
     int count=0;
     int maxcount=0;
     int i=begin;
@@ -58,9 +57,11 @@ void* search(void *args)
     int end=arg->end;
     char* buf=arg->buf;
     int *res=arg->res;
+
     if (costyl){
         count=lastcount;
     }
+
     while (buf[i]!='\0' && i<=end)
     {
         if (( (int)buf[i] > 47) && ( (int)buf[i] < 58 ))
