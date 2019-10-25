@@ -9,13 +9,14 @@
 
 #define MAX_THREAD 4
 
-
-
 int main() {
     pthread_mutex_init(&lock, NULL);
+    
     char *buffer = malloc(BUF_LENGTH);
     int res[4];
+    
     readFile(buffer,"../text.txt");
+    
     clock_t t,timer;
     t = clock();
 
