@@ -9,6 +9,8 @@
 
 #define MAX_THREAD 4
 
+pthread_mutex_t lock;
+
 enum { BUF_LENGTH = 100*1024*1024 };
 
 typedef struct Args_tag {
@@ -52,6 +54,7 @@ void* lin_search(char* buf,int begin,int end,int *res)
 
 void* search(void *args)
 {
+    pthread_mutex_lock(&lock);
     someArgs_t *arg=(someArgs_t*) args;
     int count=0;
     int maxcount=0;
@@ -67,6 +70,7 @@ void* search(void *args)
         if (( (int)buf[i] > 47) && ( (int)buf[i] < 58 ))
         {
             count++;
+
             lastcount++;
         }
         else{
@@ -83,8 +87,10 @@ void* search(void *args)
     if ((( (int)buf[end] > 47) && ( (int)buf[end] < 58 ))||((buf[end]=='\n')&&(((int)buf[end-1])>47)&&((int)buf[end-1])<58))
     {
         costyl=TRUE;
+        //lastcount--;
     }
     *res=maxcount;
+    pthread_mutex_unlock(&lock);
 }
 
 void readFile(char* buf, const char* fileName){
@@ -104,6 +110,7 @@ void readFile(char* buf, const char* fileName){
 }
 
 int main() {
+    pthread_mutex_init(&lock, NULL);
     char *buffer = malloc(BUF_LENGTH);
     int res[4];
     readFile(buffer,"../text.txt");
@@ -128,8 +135,12 @@ int main() {
     t = clock();
     for (int i = 0; i < MAX_THREAD; i++) {
         args[i].buf=buffer;
-        args[i].i=i * fsize / 4;
-        args[i].end=((fsize-1) * (i + 1) / 4);
+        args[i].i=(i * fsize / 4)  +1;
+        if (i==0)
+        {
+            args[i].i=0;
+        }
+        args[i].end=((fsize) * (i + 1) / 4);
         args[i].res=&res[i];
         pthread_create(&threads[i], NULL, search, (void *) &args[i]);
         timer = clock() - t;
