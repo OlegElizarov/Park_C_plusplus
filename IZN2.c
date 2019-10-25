@@ -6,6 +6,7 @@
 #include <mach/machine.h>
 #include <stdatomic.h>
 #include "func2.c"
+#include <unistd.h>
 
 #define MAX_THREAD 4
 
@@ -46,12 +47,11 @@ int main() {
         args[i].res=&res[i];
 
         pthread_create(&threads[i], NULL, search, (void *) &args[i]);
-
         timer = clock() - t;
         t=clock();
         double time_taken = ((double) timer) / CLOCKS_PER_SEC; // in seconds
         printf("%d %f \n",i,time_taken);
-
+        sleep(0.3);
     }
     // joining 4 threads i.e. waiting for all 4 threads to complete
 
