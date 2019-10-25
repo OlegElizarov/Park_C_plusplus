@@ -3,7 +3,6 @@
 #include <stdlib.h>
 #include <time.h>
 #include <pthread.h>
-#include <mach/machine.h>
 #include <stdatomic.h>
 #include "func2.c"
 #include <unistd.h>
