@@ -163,6 +163,8 @@ int main() {
         printf("%s %d %d \n","Result of thread",i,res[i]);
     }
     printf("%s %d","Max is:",max);
+    pthread_mutex_destroy(&lock);
+
     free(buffer);
     return 0;
 }
