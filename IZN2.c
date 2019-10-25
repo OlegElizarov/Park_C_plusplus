@@ -4,6 +4,8 @@
 #include <time.h>
 #include <pthread.h>
 #include <mach/machine.h>
+#include <stdatomic.h>
+
 
 #define MAX_THREAD 4
 
@@ -18,7 +20,7 @@ typedef struct Args_tag {
 
 long fsize=0;
 boolean_t costyl=FALSE;
-int lastcount=0;
+atomic_int lastcount=0;
 
 
 void* lin_search(char* buf,int begin,int end,int *res)
@@ -50,7 +52,6 @@ void* lin_search(char* buf,int begin,int end,int *res)
 
 void* search(void *args)
 {
-
     someArgs_t *arg=(someArgs_t*) args;
     int count=0;
     int maxcount=0;
@@ -79,7 +80,7 @@ void* search(void *args)
         };
         i++;
     }
-    if (( (int)buf[end] > 47) && ( (int)buf[end] < 58 ))
+    if ((( (int)buf[end] > 47) && ( (int)buf[end] < 58 ))||((buf[end]=='\n')&&(((int)buf[end-1])>47)&&((int)buf[end-1])<58))
     {
         costyl=TRUE;
     }
@@ -128,7 +129,7 @@ int main() {
     for (int i = 0; i < MAX_THREAD; i++) {
         args[i].buf=buffer;
         args[i].i=i * fsize / 4;
-        args[i].end=(fsize * (i + 1) / 4);
+        args[i].end=((fsize-1) * (i + 1) / 4);
         args[i].res=&res[i];
         pthread_create(&threads[i], NULL, search, (void *) &args[i]);
         timer = clock() - t;
