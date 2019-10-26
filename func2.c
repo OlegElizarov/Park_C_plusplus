@@ -23,32 +23,6 @@ atomic_long  fsize=0;
 bool costyl=false;
 atomic_int lastcount=0;
 
-void* lin_search(char* buf,int begin,int end,int *res)
-{
-    int count=0;
-    int maxcount=0;
-    int i=begin;
-
-    while (buf[i]!='\0' && i<=end)
-    {
-        if (isdigit(buf[i]))
-        {
-            count++;
-        }
-        else{
-            count=0;
-        }
-        i++;
-        if (count>maxcount)
-        {
-            maxcount=count;
-        };
-    }
-
-    *res=maxcount;
-}
-
-
 void* search(void *args)
 {
     pthread_mutex_lock(&lock);
