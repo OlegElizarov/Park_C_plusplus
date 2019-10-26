@@ -49,6 +49,8 @@ cd /home/travis/build/OlegElizarov/Park_C_plusplus/build
 sudo make Gtest_run
 sudo make Gtest_runn
 
-./Gtest_runn ./text.txt
+ls -la
+
+./Gtest_runn ../text.txt
 
 valgrind --leak-check=full -q ./Gtest_run
