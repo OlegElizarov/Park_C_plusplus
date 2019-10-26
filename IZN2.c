@@ -9,14 +9,13 @@
 
 #define MAX_THREAD 4
 
-int main() {
+
+
+int main(int argc,char *argv[]) {
     pthread_mutex_init(&lock, NULL);
-    
     char *buffer = malloc(BUF_LENGTH);
     int res[4];
-    
-    readFile(buffer,"../text.txt");
-    
+    readFile(buffer,argv[1]);
     clock_t t,timer;
     t = clock();
 
@@ -51,7 +50,7 @@ int main() {
         t=clock();
         double time_taken = ((double) timer) / CLOCKS_PER_SEC; // in seconds
         printf("%d %f \n",i,time_taken);
-        sleep(0.3);
+        sleep(1);
     }
     // joining 4 threads i.e. waiting for all 4 threads to complete
 
@@ -68,7 +67,7 @@ int main() {
     }
     printf("%s %d","Max is:",max);
     pthread_mutex_destroy(&lock);
-
+    printf("\n");
     free(buffer);
     return 0;
 }
