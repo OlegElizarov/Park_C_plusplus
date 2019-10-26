@@ -5,6 +5,7 @@
 #include <pthread.h>
 #include <stdatomic.h>
 #include <stdbool.h>
+#include <ctype.h>
 
 pthread_mutex_t lock;
 
@@ -30,7 +31,7 @@ void* lin_search(char* buf,int begin,int end,int *res)
 
     while (buf[i]!='\0' && i<=end)
     {
-        if (( (int)buf[i] > 47) && ( (int)buf[i] < 58 ))
+        if (isdigit(buf[i]))
         {
             count++;
         }
@@ -65,7 +66,7 @@ void* search(void *args)
 
     while (buf[i]!='\0' && i<=end)
     {
-        if (( (int)buf[i] > 47) && ( (int)buf[i] < 58 ))
+        if (isdigit(buf[i]))
         {
             count++;
 
@@ -82,7 +83,7 @@ void* search(void *args)
         };
         i++;
     }
-    if ((( (int)buf[end] > 47) && ( (int)buf[end] < 58 )))//||((buf[end]=='\n')&&(((int)buf[end-1])>47)&&((int)buf[end-1])<58))
+    if (isdigit(buf[i]))
     {
         costyl=true;
         //lastcount--;
