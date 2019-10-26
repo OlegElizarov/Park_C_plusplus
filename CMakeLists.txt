@@ -13,7 +13,7 @@ set(LIB_SOURCE_FILE
 
 add_library(study_std_lib SHARED ${LIB_SOURCE_FILES})
 
-add_library(study_std_lib STATIC ${LIB_SOURCE_FILE})
+add_library(study_std_lib1 STATIC ${LIB_SOURCE_FILE})
 
 project(Gtest_run)
 
@@ -24,6 +24,6 @@ include_directories(Gtest/googletest-master/googletest/include Gtest/googletest-
 add_executable(Gtest_run Gtest/test.cpp )
 add_executable(Gtest_runn  IZN2.c)
 
-target_link_libraries(Gtest_run study_std_lib)
-target_link_libraries(Gtest_runn study_std_lib pthread)
+target_link_libraries(Gtest_run study_std_lib study_std_lib1)
+target_link_libraries(Gtest_runn study_std_lib pthread study_std_lib1)
 target_link_libraries(Gtest_run gtest gtest_main pthread)
