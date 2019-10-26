@@ -3,7 +3,6 @@
 
 
 void* lin_search(char* buf,int begin,int end,int *res);
-void* search(void *args);
 void readFile(char* buf, const char* fileName);
 
 
