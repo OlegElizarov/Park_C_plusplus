@@ -3,6 +3,7 @@
 #include <iostream>
 extern "C" {
 #include "../IZN2.h"
+#include "../IZN2parall.h"
 }
 
 
