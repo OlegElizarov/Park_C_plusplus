@@ -7,7 +7,7 @@ set(LIB_SOURCE_FILES
         func2.c
         )
 
-add_library(study_std_lib STATIC ${LIB_SOURCE_FILES})
+add_library(study_std_lib SHARED ${LIB_SOURCE_FILES})
 
 project(Gtest_run)
 
